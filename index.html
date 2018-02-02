@@ -5,13 +5,130 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume PWA</title>
+  <!-- main.css stylesheet -->
   <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
+  <!-- main -->
+  <div class='main'>
+    <!--flex Container -->
+    <div class='flex-container'>
+      <!-- flex items -->
 
-  <div id="resume">
-  </div>
+      <!-- flex-item-W25 -->
+      <div class='flex-item-W25 col-md-3 card-wrapper profile-card-wrapper'>
+        <!-- card -->
+        <div class="card profile-card">
+          <!-- basic-details -->
+          <div class='basic-details'>
+            <!-- profile-pic -->
+            <div class="profile-pic">
+              <!-- img tag with circel style -->
+              <img class="img-circle center-block" alt="picture" src="https://s.gravatar.com/avatar/9acdb04e603c1cac2b893190f6dd5911?s=100&amp;r=pg&amp;d=mm" >
+            </div><!-- profile-pic end -->
+            <div class='details'><!-- details -->
+              <!-- name -->
+              <h1 class="name text-center"></h1>
+              <!-- name -->
+              <h2 class="label text-center"></h2>
+            </div><!-- details end -->
+          </div><!-- basic-details end -->
+          <hr>
+          <div class='contact-details'>
+            <div class="location details">
+              <span class="icon"></span>
+              <span class="info">1-23-5, Indra Nagar, Vijayawada 520014, Andhra Pradesh, IN</span>
+            </div>
+            <div class="mobile details">
+              <span class="icon">Mobile: </span>
+              <span class="info" ><a class='value' href=""></a></span>
+            </div>
+            <div class="email details">
+              <span class="icon">Email: </span>
+              <span class="info"><a class='value' href="" ></a></span>
+            </div>
+          </div>
+          <hr>
+          <div class='social-links text-center'></div>
+            <!--
+            <a href="http://github.com/jaganmohangumpa" target="_blank"><img src="/images/github-logo.svg" /></a>
+            <a href="http://linkedin.com/in/jaganmohangumpa" target="_blank"><img src="/images/linkedin-button-logo.svg" /></a>
+          -->
+            <!--
+            <div class="github">
+              <span class="icon"></span>
+              <span class="info"><a href="http://github.com/jaganmohangumpa" target="_blank">jaganmohangumpa</a></span>
+            </div>
+            <div class="linkedin">
+              <span class="icon"></span>
+              <span class="info"><a href="http://linkedin.com/in/jaganmohangumpa" target="_blank">jaganmohangumpa</a></span>
+            </div>
+          -->
 
+        </div><!-- card end -->
+      </div><!-- flex-item-W25 end -->
+      <!-- flex-item-W75 -->
+      <div class="flex-item-W75 col-md-9 card-wrapper profile-wrapper">
+        <div class="card main-card">
+          <div class="main-flex-container">
+
+            <!-- summary -->
+            <div class="main-summary">
+              <header>
+                <h2 class="summary-title">Professional Summary</h2>
+              </header>
+              <hr>
+              <div class="summary"></div>
+            </div>
+
+            <!-- skills -->
+            <div class="skills">
+              <header>
+                <h2 class="section-title">Technical Skills</h2>
+              </header>
+              <div class="skills-content"></div>
+            </div>
+
+            <div class='experience'>
+              <header>
+                <h2 class="section-title">Work Experience</h2>
+              </header>
+              <hr>
+              <div class="work"></div>
+            </div>
+
+            <!-- education -->
+            <div class='education'>
+              <header>
+                <h2 class="section-title">Education</h2>
+              </header>
+              <hr>
+              <div class="education-content"></div>
+            </div>
+            <!-- awards -->
+            <div class='awards'>
+              <header>
+                <h2 class="section-title">Achievement / Awards</h2>
+              </header>
+              <hr>
+              <div class="awards-content"></div>
+            </div>
+            <!-- languages -->
+            <div class='languages'>
+              <header>
+                <h2 class="section-title">Languages</h2>
+              </header>
+              <hr>
+              <div class="content"></div>
+            </div>
+
+        </div><!-- flex-item-W75 end-->
+
+      <!-- flex items end -->
+    </div><!-- flex-container -->
+  </div><!-- main end -->
+
+  <!--main.js script file -->
   <script src="scripts/main.js" async></script>
 
 </body>
