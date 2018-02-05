@@ -38,10 +38,31 @@ body {
    768-480     - tablet
    480-less    - phone landscape & smaller
 --------------------------------------------*/
-@media all and (min-width: 1024px) and (max-width: 1280px) { }
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .flex-item-W25 { max-width: 30%; }
+  .contact-details{
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+  }
+}
 
-@media all and (min-width: 768px) and (max-width: 1024px) { }
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .flex-container { flex-direction: column; }
+  .flex-item-W25 { max-width: 100%; }
+ }
 
-@media all and (min-width: 480px) and (max-width: 768px) { }
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .flex-container { flex-direction: column; }
+  .flex-item-W25 { max-width: 100%; }
+ }
 
-@media all and (max-width: 480px) { }
+@media all and (max-width: 480px) {
+  .flex-container { flex-direction: column; }
+  .flex-item-W25 { max-width: 100%; }
+}
