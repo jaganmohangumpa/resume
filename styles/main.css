@@ -45,6 +45,7 @@ body {
     justify-content: center;
   }
   .flex-item-W25 { max-width: 30%; }
+  
   .contact-details{
     flex-direction: column;
     align-items: left;
@@ -55,16 +56,31 @@ body {
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .flex-container { flex-direction: column; }
   .flex-item-W25 { max-width: 100%; }
+  .contact-details{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
  }
 
 @media all and (min-width: 480px) and (max-width: 768px) {
   .flex-container { flex-direction: column; }
   .flex-item-W25 { max-width: 100%; }
+  .contact-details{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
  }
 
 @media all and (max-width: 480px) {
   .flex-container { flex-direction: column; }
   .flex-item-W25 { max-width: 100%; }
+  .contact-details{
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+  }
 }
 
 .profile-pic {
@@ -149,6 +165,106 @@ hr {
     min-width: 35px;
     display: inline-block;
 }
+a img{
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+}
+
+
+.main-flex-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem
+}
+.main-summary {
+    background: #f1f8ff;
+    padding: 1.2em 1em;
+    margin-top: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 0rem;
+    margin-left: 0rem;
+  }
+
+.skills, .experience, .education, .awards, .languages {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+h2.summary-title {
+  display: inline-block;
+  background: #f1f8ff;
+  padding: 0 1em 0.3em 0;
+  color: #ff6d1f;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  font-size: .9rem;
+}
+
+h2.section-title {
+  display: inline-block;
+  background: #fff;
+  padding: 0 1em 0.3em 0;
+  color: #ff6d1f;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  font-size: .9rem;
+}
+
+.skills-content{
+  display: flex;
+  }
+
+  ol, ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  ul.keywords li, ul.courses li {
+    display: inline-block;
+    margin: 2px 2px 2px 0;
+    padding: 4px 5px 5px;
+    font-size: .9rem;
+    line-height: 1;
+    text-transform: lowercase;
+    color: #3e6d8e;
+    background-color: #dfeaf1;
+    border: 0 solid #dfeaf1;
+    white-space: nowrap;
+ }
+
+ li {
+    list-style-type: square;
+    list-style-position: outside;
+    margin-left: 1.3em;
+ }
+
+ ul.highlights{
+    display: block;
+    list-style-type: square;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 15px;
+}
+
+.content {
+    margin-top: 1.3em;
+}
+
+.work, .work-item {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.social-link {
+    margin-left: 5px;
+    min-width: 35px;
+    display: inline-block;
+}
+
 a img{
   width: 40px;
   height: 40px;
