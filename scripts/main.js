@@ -21,6 +21,7 @@
     educationTemplet(data.education);
     awardsTemplet(data.awards);
     languages(data.languages);
+    workTemplet(data.work);
   });
 
   var app = {
