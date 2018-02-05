@@ -20,6 +20,7 @@
     skillsTable(data.skills);
     educationTemplet(data.education);
     awardsTemplet(data.awards);
+    languages(data.languages);
   });
 
   var app = {
@@ -31,7 +32,8 @@
    summary: document.querySelector('.summary'),
    skills: document.querySelector('.skills-content'),
    education: document.querySelector('.education-content'),
-   awards: document.querySelector('.awards-content')
+   awards: document.querySelector('.awards-content'),
+   languages: document.querySelector('.languages .content')
  };
 
  function basicsCard(data){
@@ -119,6 +121,15 @@
       ].join("\n");
    }
    app.awards.innerHTML = items;
+  }
+
+  function languages(languages){
+    let lang = [];
+    for(var i in languages){
+      lang.push(languages[i].language);
+    }
+    let items = '<p><strong>' + lang.join(", ") + '</strong></p>';
+    app.languages.innerHTML = items;
   }
 
 })();
