@@ -12,4 +12,10 @@
     rawFile.send(null);
   }
 
+  //usage: loading data.json
+  loadJSON("resources/data.json", function(text){
+    let data = JSON.parse(text);
+    console.log(data);
+  });
+
 })();
