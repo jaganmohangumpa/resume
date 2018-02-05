@@ -33,7 +33,8 @@
    skills: document.querySelector('.skills-content'),
    education: document.querySelector('.education-content'),
    awards: document.querySelector('.awards-content'),
-   languages: document.querySelector('.languages .content')
+   languages: document.querySelector('.languages .content'),
+   work: document.querySelector('.experience .work')
  };
 
  function basicsCard(data){
@@ -130,6 +131,52 @@
     }
     let items = '<p><strong>' + lang.join(", ") + '</strong></p>';
     app.languages.innerHTML = items;
+  }
+
+  function workTemplet(work){
+    for(var i in work){
+      let item = document.createElement("div");
+      item.classList.add("work-item");
+      let header = document.createElement("header");
+      let workHeader = [
+        '<p class="position-company">',
+          '<strong>' + work[i].position + '</strong>,&nbsp;',
+          '<a href="'+ work[i].website +'" target="_blank">' + work[i].company + '</a>',
+        '</p>',
+        '<small><span class="date">' + getFormattedDate(work[i].startDate) + ' - ' + getFormattedDate(work[i].endDate) +'</span></small>'
+      ].join("\n");
+      header.innerHTML = workHeader;
+
+      let workContent = document.createElement("div");
+      workContent.classList.add("content");
+      let summary = document.createElement("div");
+      summary.classList.add("summary");
+      let p = document.createElement("p");
+      p.textContent = work[i].summary;
+      summary.appendChild(p);
+
+      let ul = document.createElement("ul");
+      ul.classList.add("highlights");
+      for(var j in work[i].highlights){
+        let li = document.createElement("li");
+        li.textContent = work[i].highlights[j];
+        ul.appendChild(li);
+      }
+
+      workContent.appendChild(summary);
+      workContent.appendChild(ul);
+
+      item.appendChild(header);
+      item.appendChild(workContent);
+      app.work.appendChild(item);
+    }
+  }
+
+  function getFormattedDate(stringDate) {
+    let monthNames = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+    var date = new Date(stringDate);
+    var formattedDate = monthNames[date.getMonth()].slice(0,3) + ', ' + date.getFullYear();
+    return formattedDate;
   }
 
 })();
