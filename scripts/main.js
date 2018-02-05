@@ -45,6 +45,7 @@
       card.querySelector('.social-links').innerHTML = link;
 
       card.querySelector('.location .info').textContent = address(data.location);
+      summaryCard(data);
   }
 
   function address(location){
@@ -56,5 +57,20 @@
     }
     return loc.join(", ");
   }
+
+  function summaryCard(data) {
+   let p = document.createElement("p");
+   p.textContent = data.summary;
+   app.summary.appendChild(p);
+
+   let ul = document.createElement("ul");
+   ul.classList.add("highlights");
+   for(var i in data.highlights){
+     let li = document.createElement("li");
+     li.textContent = data.highlights[i];
+     ul.appendChild(li);
+   }
+   app.summary.appendChild(ul);
+ }
 
 })();
