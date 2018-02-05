@@ -18,6 +18,7 @@
     console.log(data);
     basicsCard(data.basics);
     skillsTable(data.skills);
+    educationTemplet(data.education);
   });
 
   var app = {
@@ -28,6 +29,7 @@
    profileCard: document.querySelector('.profile-card'),
    summary: document.querySelector('.summary'),
    skills: document.querySelector('.skills-content'),
+   education: document.querySelector('.education-content')
  };
 
  function basicsCard(data){
@@ -86,6 +88,24 @@
     }
     table.innerHTML = row;
     app.skills.appendChild(table);
+  }
+
+  function educationTemplet(education){
+    let items = '';
+    for(var i in education){
+      items += [
+        '<div class="education-item">',
+          '<header>',
+            '<p class="education-details">',
+              '<strong>' + education[i].studyType + '</strong> ' + (education[i].area ? "in":"") + ' <strong>' + education[i].area + ',&nbsp;</strong>' + education[i].institution,
+            '</p>',
+            '<small><span class="date">' + getFormattedDate(education[i].startDate) + ' - '+ getFormattedDate(education[i].endDate) +'</span></small>',
+            '<div class="gpa"><strong> Grade:</strong><i>' + education[i].gpa + '</i></div>',
+          '<header>',
+        '</div>'
+      ].join("\n");
+   }
+   app.education.innerHTML = items;
   }
 
 })();
