@@ -17,6 +17,7 @@
     let data = JSON.parse(text);
     console.log(data);
     basicsCard(data.basics);
+    skillsTable(data.skills);
   });
 
   var app = {
@@ -24,7 +25,9 @@
      github: "/images/github-logo.svg",
      linkedin:"/images/linkedin-button-logo.svg"
    },
-   profileCard: document.querySelector('.profile-card')
+   profileCard: document.querySelector('.profile-card'),
+   summary: document.querySelector('.summary'),
+   skills: document.querySelector('.skills-content'),
  };
 
  function basicsCard(data){
