@@ -18,4 +18,12 @@
     console.log(data);
   });
 
+  var app = {
+   icon: {
+     github: "/images/github-logo.svg",
+     linkedin:"/images/linkedin-button-logo.svg"
+   },
+   profileCard: document.querySelector('.profile-card')
+ };
+
 })();
