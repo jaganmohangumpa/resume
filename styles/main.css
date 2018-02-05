@@ -66,3 +66,91 @@ body {
   .flex-container { flex-direction: column; }
   .flex-item-W25 { max-width: 100%; }
 }
+
+.profile-pic {
+    padding: 20px 0;
+}
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+}
+img {
+    vertical-align: middle;
+    border: 0;
+}
+.img-circle {
+    border-radius: 50%;
+}
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+a {
+    color: #0095ff;
+    text-decoration: none;
+}
+div, span, header, p,
+h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+small {
+    font-size: 85%;
+    color: #777;
+}
+span{
+  font-size: 0.9em;
+}
+h1.name {
+  margin: 0;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 100%;
+    font-family: "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande",
+    sans-serif;
+}
+
+h2.label {
+  margin: 0;
+    color: #ff0000;
+    font-size: 1.47rem;
+    font-weight: 300;
+}
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.text-center { text-align: center; }
+.contact-details{
+    display: flex;
+    padding: 5px 0;
+    flex-direction: column;
+}
+
+.icon, .info {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 0.8em;
+}
+.mobile, .email, .web, .icon, .info, .github, .linkedin {
+    padding: 2px;
+    vertical-align: middle;
+}
+
+.social-link {
+    margin-left: 5px;
+    min-width: 35px;
+    display: inline-block;
+}
+a img{
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+}
