@@ -1,0 +1,211 @@
+﻿{
+  "basics": {
+    "name": "Jagan Mohan Gumpa",
+    "label": "Sr. Software Developer",
+    "picture": "",
+    "email": "jaganmohan.g@apssdc.in",
+    "phone": "(897) 889-7862",
+    "website": "",
+    "summary": "Over 5 years of IT experience with enterprise applicaton integration and web development as Software Developer, gained an immense knowledge in research, analysis, testing, development on various technologies and tools.",
+    "highlights":[
+      "Lengthy leadership experience, up to managing multiple development teams simultaneously. Has a background in teaching training classes, and deeply enjoys mentoring junior developers",
+      "Hands on experience in both Agile and Waterfall process models",
+      "Extensive experience in designing responsive web UI using Angular JS, Bootstrap, CSS3, HTML5, JavaScript , JQuery and AJAX",
+      "Experience in developing base code structure following clean code principles and generic frameworks using Java.",
+      "very well hands on development experience with Open source Systems and in depth working knowledge of Spring, MyBayis/JPA/Hibernate, Struts",
+      "Extensive experience in using the AWS using Spring"
+    ],
+    "location": {
+      "address": "1-23-5, Indra Nagar",
+      "city": "Vijayawada",
+      "postalCode": "520014",
+      "region": "Andhra Pradesh",
+      "countryCode": "IN"
+    },
+    "profiles": [
+      {
+        "network": "github",
+        "username": "jaganmohangumpa",
+        "url": "https://github.com/jaganmohangumpa"
+      },
+      {
+        "network": "linkedin",
+        "username": "jaganmohangumpa",
+        "url": "https://linkedin.com/in/jaganmohangumpa"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "AP State Skill Development Corporation",
+      "position": "Sr. Software Developer",
+      "website": "http://apssdc.in",
+      "startDate": "2011-06-01",
+      "endDate": "2015-04-16",
+      "summary": "Implementing e-Goverment application for Skill Development Programs, Integrating SOAP base UIADI Web Service & Implementing Spring RestFull Web Services and client inteface. Developed data aggregation and reporting solutions for programs monitor & analytics.",
+      "highlights": [
+        "Involved in design and development of core product with Spring MVC architecture for Web Services Application development customized for Skill Development Programs",
+        "Developed REST Web services with a synchronous request-response and also involved in developing and deploying the Web Services – WSDL SOAP and for getting the data to and fro from the Webseries and hub backend system. (third party services)",
+        "Responsible in developing the Payment Approval Re-Authentication module as per the client needs adding additional features, enhancements to the current functionality",
+        "Used MyBayis as an Object Relational Mapping tool for the data persistence.",
+        "Created event driven jobs using AWS tolls like S3 and AWS Lambda with Java.",
+        "Developed a AWS lambda function to send a request for internal service end points through API."
+      ]
+    },
+    {
+      "company": "Mars Telecom Systems Pvt Ltd",
+      "position": "Software Engineer",
+      "website": "http://mars-india.com",
+      "startDate": "2011-06-01",
+      "endDate": "2015-04-13",
+      "summary": "Mars undertake projects and services such as The e-government involves the automation or computerization of existing paper-based procedures that will prompt new styles of leadership, new ways of debating and deciding strategies, new ways of transacting business, new ways of listening to citizens and communities, and new ways of organizing and delivering information.",
+      "highlights": [
+        "Involved in analysis and design phases of Software Development Life Cycle (SDLC).",
+        "The application’s business logic was developed in J2EE using an MVC based architecture.",
+        "Developed several Action classes which extend Action Support class to validate input parameters.",
+        "Developed Graphical User Interfaces using UI frameworks and webpages using HTML and JSP’s for user interaction",
+        "Integrated the application with Spring Framework for implementing Dependency Injection and provide abstraction between presentation layer and persistence layer."
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "CoderDojo",
+      "position": "Teacher",
+      "website": "https://coderdojo.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Global movement of free coding clubs for young people.",
+      "highlights": [
+        "Awarded 'Teacher of the Month'"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Bundelkhand University",
+      "area": "Computer Science Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2007-07-01",
+      "endDate": "2011-05-01",
+      "gpa": "7.0",
+      "courses": []
+    },
+    {
+      "institution": "A.S.M Junior College",
+      "area": "MPC",
+      "studyType": "APBIE / IPE (Class XII)",
+      "startDate": "2005-06-01",
+      "endDate": "2007-05-01",
+      "gpa": "8.0",
+      "percentage": "",
+      "courses": ["Mathematics", "Physics", "Chemistry"]
+    },
+    {
+      "institution": "Goutham Public School",
+      "area": "",
+      "studyType": "APBSE / SSC (Class X)",
+      "startDate": "2004-06-01",
+      "endDate": "2005-04-24",
+      "gpa": "6.0",
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "Employee of the month",
+      "date": "2016-08-01",
+      "awarder": "AP Sate Skil Development Corporation",
+      "summary": ""
+    },
+    {
+      "title": "National Honor Society",
+      "date": "2009-05-01",
+      "awarder": "Red Cross",
+      "summary": ""
+    },
+    {
+      "title": "Academic Honor Roll",
+      "date": "2007-05-01",
+      "awarder": "A.S.M Junior College",
+      "summary": ""
+    }
+  ],
+  "publications": [
+    {
+      "name": "",
+      "publisher": "",
+      "releaseDate": "",
+      "website": "",
+      "summary": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript"
+      ]
+    },
+    {
+      "name": "Technologies",
+      "level": "Master",
+      "keywords": [
+        "Java", "JEE", "JNDI", "Web Services (SOAP & RestFull)"
+      ]
+    },
+    {
+      "name": "Frameworks / Libraries",
+      "level": "Master",
+      "keywords": [
+        "Spring (MVC, JDBC, Transaction)", "Struts", "MyBayis/JPA/Hibernate"
+      ]
+    },
+    {
+      "name": "Data Base",
+      "level": "",
+      "keywords": [
+        "Oracle", "MySQL/Percona", "PostgreSQL", "MongoDB", "Cassandra"
+      ]
+    },
+    {
+      "name": "Operating System",
+      "level": "",
+      "keywords": [
+        "Windows", "UNIX & LINUX"
+      ]
+    },
+    {
+      "name": "Environment / Infrastructure",
+      "level": "Master",
+      "keywords": [
+        "Amazon Web Services"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Telugu",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": ""
+    }
+  ],
+  "interests": [
+    {
+      "name": "Member of Goutham Public School Tennis Team",
+      "keywords": []
+    }
+  ],
+  "references": [
+    {
+      "name": "",
+      "reference": ""
+    }
+  ]
+}
