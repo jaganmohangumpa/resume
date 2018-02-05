@@ -73,4 +73,16 @@
    app.summary.appendChild(ul);
  }
 
+ function skillsTable(skills) {
+    var table = document.createElement("table");
+    table.className = 'skill';
+    table.setAttribute('id','skill');
+    let row = '';
+    for(var i in skills){
+      row += "<tr><td><strong>" + skills[i].name + "</strong></th><td>" + skills[i].keywords.join(', ') + "</td></tr>";
+    }
+    table.innerHTML = row;
+    app.skills.appendChild(table);
+  }
+
 })();
