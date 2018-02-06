@@ -1,6 +1,7 @@
 (function() {
 
   function loadJSON(file, callback) {
+    //AJAX call using XMLHttpRequest
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
     rawFile.open("GET", file, true);
