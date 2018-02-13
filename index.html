@@ -1,14 +1,18 @@
 <!DOCTYPE html>
+<!-- The HTML <!DOCTYPE> tag is used for specifying
+which language and version the document is using. -->
 <html>
+
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume PWA</title>
-  <!-- main.css stylesheet file-->
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <title>Resume</title>
+  <!-- main.css external stylesheet -->
+  <link rel="stylesheet" href="/styles/main.css">
 </head>
+
 <body>
+  <!-- Page content... -->
   <!--flex Container -->
   <div class='flex-container'>
     <!-- flex items -->
@@ -16,43 +20,43 @@
     <!-- flex-item-W25 -->
     <div class='flex-item-W25 card-wrapper'>
       <!-- card -->
-        <div class="card profile-card">
-          <!-- basic-details -->
-          <div class='basic-details'>
-            <!-- profile-pic -->
-            <div class="profile-pic">
-              <!-- img tag with circel style -->
-              <img class="img-circle center-block" alt="picture" src="/resume/images/pic.png" >
-            </div><!-- profile-pic end -->
-            <div class='details'><!-- details -->
-              <!-- name --><h1 class="name text-center"></h1>
-              <!-- Role --><h2 class="label text-center"></h2>
-            </div><!-- details end -->
-          </div><!-- basic-details end -->
-          <hr>
-          <!-- Contact Details -->
-          <div class='contact-details'>
-            <div class="location details">
-              <span class="icon"><strong>&#10224;</strong> </span>
-              <span class="info"></span>
-            </div>
-            <div class="mobile details">
-              <span class="icon">&phone; </span>
-              <span class="info" ><a class='value' ></a></span>
-            </div>
-            <div class="email details">
-              <span class="icon"><strong>&#9993;</strong> </span>
-              <span class="info"><a class='value' itemprop="email"></a></span>
-            </div>
-          </div><!-- Contact Details -->
-          <hr>
-          <!-- social-links --><div class='social-links text-center'>
-          <!--
-            <a href="http://github.com/jaganmohangumpa" target="_blank"><img src="/images/github-logo.svg" /></a>
-            <a href="http://linkedin.com/in/jaganmohangumpa" target="_blank"><img src="/images/linkedin-button-logo.svg" /></a> -->
+      <div class="card profile-card">
+        <!-- basic-details -->
+        <div class='basic-details'>
+          <!-- profile-pic -->
+          <div class="profile-pic">
+            <!-- img tag with circel style -->
+            <img class="img-circle center-block" alt="picture" src="/images/pic.png" >
+          </div><!-- profile-pic end -->
+          <div class='details'><!-- details -->
+            <!-- name --><h1 class="name text-center">Jagan Mohan Gumpa</h1>
+            <!-- Role --><h2 class="label text-center">Sr. Software Developer</h2>
+          </div><!-- details end -->
+        </div><!-- basic-details end -->
+        <hr>
+        <!-- Contact Details -->
+        <div class='contact-details'>
+          <div class="location details">
+            <span class="icon"><strong>&#10224;</strong> </span>
+            <span class="info">1-24, Indra Nager, Vijayawada</span>
           </div>
-        </div><!-- card end -->
-    </div><!-- flex-item-W25 end -->
+          <div class="mobile details">
+            <span class="icon">&phone; </span>
+            <span class="info" ><a class='value' >8978897862</a></span>
+          </div>
+          <div class="email details">
+            <span class="icon"><strong>&#9993;</strong> </span>
+            <span class="info"><a class='value' itemprop="email">jaganmohangumpa@gmail.com</a></span>
+          </div>
+        </div><!-- Contact Details -->
+        <hr>
+        <!-- social-links --><div class='social-links text-center'>
+
+          <a href="http://github.com/jaganmohangumpa" target="_blank"><img src="/images/github-logo.svg" /></a>
+          <a href="http://linkedin.com/in/jaganmohangumpa" target="_blank"><img src="/images/linkedin-button-logo.svg" /></a>
+        </div>
+      </div> <!-- card end -->
+    </div>    <!-- flex-item-W25 end -->
     <!-- flex-item-W75 -->
     <div class="flex-item-W75 card-wrapper">
       <!-- card -->
@@ -108,13 +112,13 @@
             <div class="content"></div>
           </div>
         </div>
-      </div><!-- card end -->
-    </div><!-- flex-item-W75 end -->
+      </div> <!-- card end -->
+    </div> <!-- flex-item-W75 end -->
 
     <!-- flex items end-->
-  </div>
-
-  <!-- main.js scripts file-->
+  </div>  <!-- flex-container end -->
+  <!--main.js script file -->
   <script src="scripts/main.js" async></script>
 </body>
+
 </html>

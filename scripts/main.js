@@ -1,34 +1,51 @@
-(function() {
+/*
+function loadJSON(url, callback) {
+  const xhr = new XMLHttpRequest();
+  xhr.overrideMimeType("application/json");
+  xhr.open("GET", url, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === "200") {
+      callback(xhr.responseText);
+    }
+  };
+  xhr.send(null);
+}
 
-  function loadJSON(file, callback) {
-    //AJAX call using XMLHttpRequest
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-      if (rawFile.readyState === 4 && rawFile.status == "200") {
-        callback(rawFile.responseText);
+//usage:
+loadJSON("resources/data.json", function(text) {
+  let data = JSON.parse(text);
+  console.log(data);
+});
+*/
+
+function loadJSON(url) {
+  return new Promise((resolve, reject) => {
+    return fetch(url).then(response => {
+      if (response.ok) {
+        resolve(response.json());
+      } else {
+        reject(new Error('error'));
       }
-    };
-    rawFile.send(null);
-  }
+    })
+  })
+}
 
-  //usage: loading data.json
-  loadJSON("resources/data.json", function(text){
-    let data = JSON.parse(text);
-    console.log(data);
-    basicsCard(data.basics);
-    skillsTable(data.skills);
-    educationTemplet(data.education);
-    awardsTemplet(data.awards);
-    languages(data.languages);
-    workTemplet(data.work);
-  });
+var myPromise = loadJSON("resources/data.json");
+myPromise.then(data => {
+  // Here's a list of repos!
+  console.log(data);
+  //basicsCard(data.basics)
+  //skillsTable(data.skills);
+  //educationTemplet(data.education);
+  //awardsTemplet(data.awards);
+  //languages(data.languages);
+  //workTemplet(data.work);
+});
 
-  var app = {
+var app = {
    icon: {
-     github: "/resume/images/github-logo.svg",
-     linkedin:"/resume/images/linkedin-button-logo.svg"
+     github: "/images/github-logo.svg",
+     linkedin:"/images/linkedin-button-logo.svg"
    },
    profileCard: document.querySelector('.profile-card'),
    summary: document.querySelector('.summary'),
@@ -39,25 +56,39 @@
    work: document.querySelector('.experience .work')
  };
 
- function basicsCard(data){
+ function summaryCard(basics) {
+   let p = document.createElement("p");
+   p.textContent = basics.summary;
+   app.summary.appendChild(p);
+
+   let ul = document.createElement("ul");
+   ul.classList.add("highlights");
+   for(var i in basics.highlights){
+     let li = document.createElement("li");
+     li.textContent = basics.highlights[i];
+     ul.appendChild(li);
+   }
+   app.summary.appendChild(ul);
+ }
+
+  function basicsCard(basics){
       //app.profileCard.querySelector('.name').textContent = data.name;
       var card = app.profileCard;
-      card.querySelector('.name').textContent = data.name;
-      card.querySelector('.label').textContent = data.label;
+      card.querySelector('.name').textContent = basics.name;
+      card.querySelector('.label').textContent = basics.label;
       let mobile = card.querySelector('.mobile .info .value');
-      mobile.textContent = data.phone;
-      mobile.href = "tel:" + data.phone;
+      mobile.textContent = basics.phone;
+      mobile.href = "tel:" + basics.phone;
       let email = card.querySelector('.email .info .value');
-      email.textContent = data.email;
-      email.href = "mailto:" + data.email;
+      email.textContent = basics.email;
+      email.href = "mailto:" + basics.email;
       let link = "";
-      for(var i in data.profiles){
-        link += "<a href='" + data.profiles[i].url + "' ><img src='" + app.icon[data.profiles[i].network] + "' /></a>";
+      for(var i in basics.profiles){
+        link += "<a href='" + basics.profiles[i].url + "' ><img src='" + app.icon[basics.profiles[i].network] + "' /></a>";
       }
       card.querySelector('.social-links').innerHTML = link;
-
-      card.querySelector('.location .info').textContent = address(data.location);
-      summaryCard(data);
+      summaryCard(basics);
+      card.querySelector('.location .info').textContent = address(basics.location);
   }
 
   function address(location){
@@ -70,28 +101,16 @@
     return loc.join(", ");
   }
 
-  function summaryCard(data) {
-   let p = document.createElement("p");
-   p.textContent = data.summary;
-   app.summary.appendChild(p);
-
-   let ul = document.createElement("ul");
-   ul.classList.add("highlights");
-   for(var i in data.highlights){
-     let li = document.createElement("li");
-     li.textContent = data.highlights[i];
-     ul.appendChild(li);
-   }
-   app.summary.appendChild(ul);
- }
-
- function skillsTable(skills) {
+  function skillsTable(skills) {
     var table = document.createElement("table");
     table.className = 'skill';
     table.setAttribute('id','skill');
     let row = '';
     for(var i in skills){
-      row += "<tr><td><strong>" + skills[i].name + "</strong></th><td>" + skills[i].keywords.join(', ') + "</td></tr>";
+      row += "<tr>"+
+                "<td><strong>" + skills[i].name + "</strong></td>"+
+                "<td>" + skills[i].keywords.join(', ') + "</td>"+
+             "</tr>";
     }
     table.innerHTML = row;
     app.skills.appendChild(table);
@@ -104,7 +123,8 @@
         '<div class="education-item">',
           '<header>',
             '<p class="education-details">',
-              '<strong>' + education[i].studyType + '</strong> ' + (education[i].area ? "in":"") + ' <strong>' + education[i].area + ',&nbsp;</strong>' + education[i].institution,
+              '<strong>' + education[i].studyType + '</strong> ' +
+              (education[i].area ? "in":"") + ' <strong>' + education[i].area + ',&nbsp;</strong>' + education[i].institution,
             '</p>',
             '<small><span class="date">' + getFormattedDate(education[i].startDate) + ' - '+ getFormattedDate(education[i].endDate) +'</span></small>',
             '<div class="gpa"><strong> Grade:</strong><i>' + education[i].gpa + '</i></div>',
@@ -150,7 +170,7 @@
       header.innerHTML = workHeader;
 
       let workContent = document.createElement("div");
-      workContent.classList.add("content");
+      workContent.classList.add("work-content");
       let summary = document.createElement("div");
       summary.classList.add("summary");
       let p = document.createElement("p");
@@ -175,10 +195,9 @@
   }
 
   function getFormattedDate(stringDate) {
-    let monthNames = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+    let monthNames = new Array('January', 'February','March','April','May','June','July',
+                               'August','September','October','November','December');
     var date = new Date(stringDate);
     var formattedDate = monthNames[date.getMonth()].slice(0,3) + ', ' + date.getFullYear();
     return formattedDate;
   }
-
-})();
