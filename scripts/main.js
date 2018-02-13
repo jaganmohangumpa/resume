@@ -34,12 +34,12 @@ var myPromise = loadJSON("resources/data.json");
 myPromise.then(data => {
   // Here's a list of repos!
   console.log(data);
-  //basicsCard(data.basics)
-  //skillsTable(data.skills);
-  //educationTemplet(data.education);
-  //awardsTemplet(data.awards);
-  //languages(data.languages);
-  //workTemplet(data.work);
+  basicsCard(data.basics)
+  skillsTable(data.skills);
+  educationTemplet(data.education);
+  awardsTemplet(data.awards);
+  languages(data.languages);
+  workTemplet(data.work);
 });
 
 var app = {
