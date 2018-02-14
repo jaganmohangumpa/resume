@@ -44,8 +44,8 @@ myPromise.then(data => {
 
 var app = {
    icon: {
-     github: "/images/github-logo.svg",
-     linkedin:"/images/linkedin-button-logo.svg"
+     github: "images/github-logo.svg",
+     linkedin:"images/linkedin-button-logo.svg"
    },
    profileCard: document.querySelector('.profile-card'),
    summary: document.querySelector('.summary'),
