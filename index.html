@@ -163,9 +163,11 @@ which language and version the document is using. -->
   <script src="scripts/main.js" async></script>
     <script type="text/javascript">
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js')
-          .then(() => console.log('service worker installed'))
-          .catch(err => console.error('Error', err));
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('sw.js')
+            .then(() => console.log('service worker installed'))
+            .catch(err => console.error('Error', err));
+        });  
       }
       function addToHomeScreen() {
         let a2hsBtn = document.querySelector(".ad2hs-prompt");  // hide our user interface that shows our A2HS button
@@ -234,11 +236,13 @@ which language and version the document is using. -->
                 // good is handled in
                 promptEvent = null;
                 root.classList.remove('available');
+                root.style.display = 'none';
               })
               .catch(function(installError) {
                 // Boo. update the UI.
                 promptEvent = null;
                 root.classList.remove('available');
+                root.style.display = 'none';
               });
           }
         };
@@ -247,12 +251,14 @@ which language and version the document is using. -->
           promptEvent = null;
           // This fires after onbeforinstallprompt OR after manual add to homescreen.
           root.classList.remove('available');
+          root.style.display = 'none';
         };
 
         const beforeinstallprompt = function(e) {
           promptEvent = e;
           promptEvent.preventDefault();
           root.classList.add('available');
+          root.style.display = 'none';
           return false;
         };
 
@@ -274,7 +280,37 @@ which language and version the document is using. -->
         //   a2hsBtn.style.display = 'none';  // Show the prompt
         // }, 3000);
       }
+      
+      
+      function displayNotification() {
+        if (Notification.permission == 'granted') {
+          navigator.serviceWorker.getRegistration().then(function(reg) {
 
+              let bmsg = 'Here is a notification body! : ' +  today();
+          var options = {
+                  body: bmsg,
+                  icon: '/content/dam/jarvis/secure/Icons/favicons/android-chrome-144x144.png',
+                  vibrate: [100, 50, 100],
+                  data: {
+                    dateOfArrival: Date.now(),
+                    primaryKey: 1
+                  }
+                };
+              reg.showNotification('Title: Jarvis | United Health Care', options);
+
+              /*
+              fetch('https://jsonplaceholder.typicode.com/todos')
+                .then(response => response.json())
+                .then(data => {
+                      console.log(JSON.stringify(data[0].title));
+              reg.showNotification(data[0].title, options);
+              })
+                  */
+
+          });
+        }
+      }
+      setInterval(displayNotification, 30000);
     </script>
 </body>
 
