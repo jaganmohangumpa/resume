@@ -1,0 +1,13 @@
+{
+  "short_name": "PWA Test",
+  "name": "PWA Test",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/jeffposnick/create-react-pwa/master/favicon.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://jaganmohangumpa.github.io/resume/",
+  "display": "standalone"
+}
